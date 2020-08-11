@@ -1,0 +1,128 @@
+@import '../../../sass/utils/abstract';
+
+.mainWrapper {
+  width: 100%;
+  background: $background-white;
+  box-shadow: $primary-box-shadow;
+  border-radius: $primary-border-radius;
+  padding: 24px 16px;
+}
+
+// header
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  display: flex;
+  align-items: center;
+  .text {
+    color: $primary-green;
+    font-weight: bold;
+    margin-left: 8px;
+  }
+}
+.action {
+  button {
+    padding: 0px;
+  }
+}
+.indicatorIcon {
+  svg {
+    path {
+      fill: $primary-green;
+      stroke: transparent;
+    }
+    path[stroke-linecap='round'] {
+      fill: transparent;
+      stroke: $primary-green;
+    }
+    rect,
+    circle {
+      stroke: $primary-green;
+    }
+  }
+}
+
+.closeIcon {
+  svg {
+    path {
+      fill: $text-black-30;
+      stroke: transparent;
+    }
+    path[stroke-linecap='round'] {
+      fill: transparent;
+      stroke: $text-black-30;
+    }
+  }
+}
+
+// content
+.content {
+  margin-top: 30px;
+}
+
+// inputs
+.inputsWrapper {
+  margin: 0px -8px;
+  width: calc(100% + 16px);
+  display: flex;
+}
+
+.inputWrapper {
+  width: calc(50% - 16px);
+  margin: 0px 8px;
+  input {
+    border: 1px solid $area-blue-text;
+  }
+}
+
+.focusedInputWrapper {
+  input {
+    border: 1px solid $primary-green;
+  }
+  label {
+    color: $primary-green;
+  }
+}
+
+.invalidInputWrapper {
+  input {
+    border: 1px solid $traffic-red;
+  }
+  label {
+    color: $traffic-red;
+  }
+}
+
+// calendar
+.calendarWrapper {
+  margin-top: 20px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.filterCalender {
+  width: 100%;
+  background: green;
+}
+
+// footer
+.footer {
+  position: absolute;
+  bottom: 16px;
+  width: calc(100% - 32px);
+  z-index: 999999;
+  margin-top: 20px;
+  .applyBtn {
+    width: 100%;
+    background: $primary-green;
+    border-radius: $primary-border-radius;
+    padding: 19px 0px 20px;
+    .value {
+      font-weight: 900;
+      color: $background-white;
+      line-height: 17px;
+    }
+  }
+}

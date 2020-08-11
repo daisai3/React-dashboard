@@ -1,0 +1,48 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/certificate-arn: {{ .Values.CertArn }}
+    alb.ingress.kubernetes.io/healthcheck-path: /status
+    alb.ingress.kubernetes.io/actions.ssl-redirect: '{"Type": "redirect", "RedirectConfig":{ "Protocol": "HTTPS", "Port": "443", "StatusCode": "HTTP_301"}}'
+    alb.ingress.kubernetes.io/actions.viewer-redirect: '{"Type": "redirect", "RedirectConfig": { "Protocol": "HTTPS", "Port": "443", "Path":"/", "Query": "#{query}", "StatusCode": "HTTP_301"}}'
+    kubernetes.io/ingress.class: alb
+  name: cja-ingress
+spec:
+  rules:
+  - host: {{ .Values.ApiURI }}
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: ssl-redirect
+          servicePort: use-annotation
+      - path: /*
+        backend:
+          serviceName: backendapi
+          servicePort: 5000
+  - host: {{ .Values.DashboardURI }}
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: ssl-redirect
+          servicePort: use-annotation
+      - path: /*
+        backend:
+          serviceName: frontend
+          servicePort: 80
+  - host: {{ .Values.licenseURI }}
+    http:
+      paths:
+        - path: /*
+          backend:
+            serviceName: ssl-redirect
+            servicePort: use-annotation
+        - path: /*
+          backend:
+            serviceName: license-server
+            servicePort: 80

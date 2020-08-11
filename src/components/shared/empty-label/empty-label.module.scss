@@ -1,0 +1,19 @@
+@import '../../../sass/utils/abstract';
+
+.emptyWrapper {
+  height: 100%;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.empty {
+  margin-left: 11px;
+  margin: auto;
+  color: $text-black-50;
+  font-weight: normal;
+}
+.line {
+  border-top: 1px solid $text-black-50;
+  width: 30%;
+}

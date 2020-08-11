@@ -1,0 +1,14 @@
+@import '../../sass/utils/abstract';
+
+.pageHeader {
+  background-color: $white;
+  margin-bottom: 10px;
+  padding: 5px 20px;
+  color: $dark-text;
+  display: flex;
+  svg {
+    width: 16px;
+    align-self: center;
+    margin-right: 5px;
+  }
+}

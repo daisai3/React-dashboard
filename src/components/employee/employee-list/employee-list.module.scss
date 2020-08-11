@@ -1,0 +1,68 @@
+@import '../../../sass/utils/abstract';
+
+.mainWrapper {
+  margin-top: 24px;
+  position: relative;
+  max-height: calc(100% - 30px);
+  padding-bottom: 20px;
+  overflow: auto;
+  padding-bottom: 50px;
+
+  table {
+    width: 100%;
+    min-width: 1200px;
+    margin: 0px -4px;
+  }
+}
+
+.column {
+  width: 15.5%;
+  &:nth-child(1) {
+    width: 90px;
+    margin: 0 !important;
+    justify-content: flex-end;
+  }
+  &:nth-child(2) {
+    padding-right: 16px;
+    justify-content: start;
+    margin-left: 0px;
+  }
+  &:last-child {
+    width: 7%;
+  }
+}
+
+.spinnerContainer {
+  margin-top: 20px;
+}
+
+// cell
+.avatarColumn {
+  span {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 15px;
+
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+  }
+  .avatarStatus {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    border: 2px solid $background-white;
+    border-radius: 50%;
+  }
+  .avatarStatus__active {
+    svg {
+      circle {
+        stroke: transparent;
+        fill: $traffic-green;
+      }
+    }
+  }
+}

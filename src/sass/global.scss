@@ -1,0 +1,509 @@
+@import './utils/abstract';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $background-color;
+  color: $text;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $dark-text;
+  margin: 0;
+  font-size: 12px;
+  font-family: lato;
+}
+
+#root {
+  overflow: hidden;
+  height: 100vh;
+}
+
+main {
+  padding: 20px 20px 20px 40px;
+  width: 100%;
+  height: calc(100vh - 60px);
+  > div {
+    height: 100%;
+  }
+}
+
+footer {
+  display: flex;
+  margin-top: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  img {
+    margin-left: 5px;
+  }
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  &:disabled {
+    background-color: $dark-gray;
+    opacity: 0.3;
+  }
+}
+
+select {
+  background: none;
+  width: 100%;
+  &:disabled {
+    background-color: $dark-gray;
+    opacity: 0.3;
+  }
+}
+
+.Global_card_wrapper {
+  background: $white !important;
+  padding: 8px;
+  border-radius: 8px;
+  box-sizing: content-box;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08), 0px 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.Global_relative {
+  position: relative;
+}
+
+.Global_bold {
+  font-weight: 500;
+}
+
+.Global_align_right {
+  align-self: flex-end;
+}
+
+.Global_align_left {
+  align-self: flex-start;
+}
+
+.Global_btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: block;
+  font-weight: 600;
+}
+
+.Global_btn_green {
+  background-color: $primary-green;
+  color: $white;
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    background-color: darken($primary-green, 10);
+  }
+}
+
+.Global_text_green {
+  color: $primary-green;
+}
+
+.Global_text_blue {
+  color: $blue;
+}
+
+.Global_text_red {
+  color: $alert-red;
+}
+
+.Global_p10 {
+  padding: 10px;
+}
+
+.Global_pb24 {
+  padding-bottom: 24px;
+}
+
+// ** Spinner ** //
+.Spinner_layout {
+  position: absolute;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.Spinner_contained {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  div {
+    max-width: 40px;
+    max-height: 40px;
+  }
+}
+
+// ** Header ** //
+.Header_container {
+  padding: px2rem(10) px2rem(20) px2rem(10) px2rem(40);
+  // background-color: $white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header_titleContainer {
+  cursor: default;
+  h1 {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 40px;
+    color: $dark-text;
+  }
+
+  h2 {
+    font-size: px2rem(16);
+    font-weight: 100;
+    margin: 0;
+  }
+}
+
+.Header_datetimeInputGroup {
+  padding: px2rem(5);
+  padding-left: px2rem(65);
+  box-shadow: 0px 0px 5px 0px;
+  border-radius: 8px;
+  input {
+    border: none;
+  }
+}
+
+.Header_notificationsWrapper {
+  display: flex;
+  svg {
+    width: px2rem(18);
+  }
+}
+.Header_btn_nav {
+  margin-right: px2rem(20);
+}
+
+.Header_btn_nav img {
+  width: px2rem(25);
+  height: px2rem(25);
+}
+.Header_btn_nav svg,
+.Header_btn_nav img {
+  transition: all 0.3s ease-in-out;
+}
+
+.Header_btn_nav:hover svg {
+  color: $dark-text;
+}
+
+.Header_btn_nav:hover img {
+  box-shadow: 0px 0px 4px 0px;
+}
+
+// ** Drawer Overlay ** //
+
+.overlay-enter {
+  opacity: 0;
+}
+.overlay-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.overlay-exit {
+  opacity: 1;
+}
+.overlay-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+// ** CHART CLASSES ** //
+
+.stroke,
+.circle {
+  color: $blue;
+}
+
+.axis-grid line,
+.axis {
+  color: $light-text;
+}
+
+.bar-tags {
+  color: $dark-text;
+}
+
+//** SCROLLBAR **//
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: $white;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba($primary-green, 0.4);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($primary-green, 1);
+}
+
+//** Customer Map Dot Animations **//
+
+.customer_dot-enter,
+.customer_dot-appear {
+  opacity: 0;
+}
+.customer_dot-enter-active,
+.customer_dot-appear-active {
+  opacity: 0.5;
+  transition: opacity 1000ms, transform 3000ms;
+}
+.customer_dot-exit {
+  border-color: black;
+}
+.customer_dot-exit-active {
+  border-color: $alert-red !important;
+  transition: border-color 1000ms ease-in;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  display: inline-block;
+  vertical-align: middle;
+}
+// grid
+.grid-column {
+  width: calc(100% - 16px);
+  margin: 0px 8px;
+  height: 100%;
+}
+
+// text
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-large {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  color: $text-black-100;
+}
+
+.text-normal {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 18px;
+  color: $text-black-100;
+}
+
+.text-small {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: $text-black-100;
+}
+
+.text-smaller {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  color: $text-black-100;
+}
+
+// page title
+.pg-title {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 40px;
+  color: #253031;
+}
+
+// summary charts
+.light-blue-bar {
+  > div {
+    background: $chart-blue-30 !important;
+  }
+  span {
+    color: $chart-blue-30 !important;
+  }
+}
+.medium-blue-bar {
+  > div {
+    background: $chart-blue-50 !important;
+  }
+  span {
+    color: $chart-blue-50 !important;
+  }
+}
+
+// list table
+.custom-table {
+  .row {
+    display: flex;
+    height: 40px;
+    align-items: center;
+  }
+  .header-row {
+    background: $chart-blue-10;
+    border-radius: 4px;
+  }
+  .content-row {
+    border-bottom: 1px solid $text-black-20;
+    height: 53px;
+  }
+
+  .column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+}
+
+.blue-text {
+  color: $chart-blue-100;
+}
+
+.light-black-text {
+  color: $text-black-50 !important;
+}
+
+.dark-black-text {
+  color: $text-black-100 !important;
+}
+
+.green-text {
+  color: $primary-green !important;
+  font-weight: 500;
+}
+
+// align
+.flex {
+  display: flex;
+}
+
+// calendar
+.DayPicker {
+  width: 100% !important;
+  > div {
+    > div {
+      width: 100% !important;
+    }
+  }
+}
+// header
+.DayPicker_weekHeaders {
+  margin: 0px;
+  font-size: 12px;
+  color: #929798;
+  .DayPicker_weekHeader {
+    top: 56px;
+  }
+}
+.DayPicker_focusRegion {
+  > div:last-child {
+    display: none;
+  }
+}
+// navigation
+.DayPickerNavigation {
+  .DayPickerNavigation_button {
+    top: 8px;
+    height: 24px;
+    width: 24px;
+    border: 0.428571px solid $chart-blue-50;
+    border-radius: 50%;
+    background: $chart-blue-10;
+    padding: 0px !important;
+    outline: none;
+    position: absolute;
+    display: flex;
+  }
+  > div:nth-child(1) {
+    left: 8px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  > div:nth-child(2) {
+    right: 8px;
+  }
+}
+.DayPicker_transitionContainer {
+  width: 100% !important;
+}
+// content
+.CalendarMonthGrid {
+  left: 0px;
+  width: 100% !important;
+}
+.CalendarMonthGrid_month__horizontal {
+  width: 100% !important;
+}
+.CalendarMonth_caption {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 48px;
+  height: 40px;
+  line-height: 40px;
+  background: $chart-blue-10;
+  border-radius: $primary-border-radius;
+}
+.CalendarMonth_table {
+  margin-top: 8px;
+}
+.CalendarDay {
+  border: none;
+  border-radius: 50%;
+  &__selected {
+    background: $primary-green;
+  }
+  &:hover {
+    background: $primary-green;
+    border: none;
+    color: $background-white;
+  }
+}

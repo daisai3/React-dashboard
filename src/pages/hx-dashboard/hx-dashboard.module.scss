@@ -1,0 +1,38 @@
+@import '../../sass/utils/abstract';
+
+.mainContainer {
+  height: 100%;
+  animation: fadeIn ease 0.5s;
+}
+
+.content {
+  margin-top: 34px;
+  .overallSummary {
+    width: 100%;
+  }
+  .bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: calc(100% + 16px);
+    margin: 0px -8px;
+    position: relative;
+  }
+}
+
+.bottom {
+  .commonJourney,
+  .hxArea {
+    margin-top: 24px;
+    height: auto;
+  }
+  .commonJourney {
+    min-width: 639px;
+    width: calc(55% - 16px);
+    min-height: 413px;
+  }
+  .hxArea {
+    min-width: 577px;
+    width: calc(45% - 16px);
+  }
+}

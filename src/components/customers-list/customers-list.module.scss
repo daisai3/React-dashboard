@@ -1,0 +1,35 @@
+@import '../../sass/utils/abstract';
+
+.customerCard {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  font-size: px2rem(14);
+  background-color: $white;
+  padding: px2rem(10px);
+  div {
+    display: none;
+  }
+}
+
+.activeCard {
+  background-color: $light-gray;
+  div {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $primary-green;
+    width: 4px;
+    border-radius: 4px;
+  }
+}
+
+.emptyWrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}

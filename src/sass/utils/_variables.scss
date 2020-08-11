@@ -1,0 +1,84 @@
+//Theme's color palette
+// primary colors
+$primary-black: #253031;
+$primary-green: #80bf40;
+$primary-blue: #70a5c3;
+
+// primary gradient
+$primary-green-gradient: linear-gradient(
+  124.73deg,
+  #80bf3f 3.43%,
+  #33745c 174.57%
+);
+$primary-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08),
+  0px 2px 8px rgba(0, 0, 0, 0.12);
+
+// background
+$background-grey: #f6f6f6;
+$background-white: #ffffff;
+$background-black: #000000;
+
+$text-black: $primary-black;
+$text-light: #929798;
+
+// text
+$text-black-100: #253031;
+$text-black-80: #4f5858;
+$text-black-50: #929798;
+$text-black-30: #d3d6d6;
+$text-black-20: #f0f1f1;
+
+// traffic
+$traffic-red: #ff5656;
+$traffic-yellow: #ffda56;
+$traffic-green: #5ff29a;
+$traffic-blue: #6196ff;
+
+// chart
+$primary-chart-color: $primary-blue;
+$chart-blue-100: #70a5c3;
+$chart-blue-50: #b7d2e1;
+$chart-blue-30: #d4e4ed;
+$chart-blue-10: #f4f9fd;
+$chart-pinkred: #d88c9a;
+$chart-yellow: #fdd739;
+$chart-green: #99d5c9;
+$chart-tracking: #6197ff;
+
+// area
+$area-blue-text: #649cbc;
+$area-red-text: #fa8585;
+$area-green-text: #64b0bc;
+$area-orange-text: #ffa34f;
+$area-purple-text: #b276ef;
+$area-yellow-text: #ffd361;
+$area-autum-text: #ae4c58;
+
+$area-blue-background: #c9e3f6;
+$area-red-background: #ffc7c7;
+$area-light-red-background: #e199a4;
+$area-green-background: #cce6ea;
+$area-orange-background: #fbe0c7;
+$area-purple-background: #e9d4ff;
+$area-yellow-background: #fffcd8;
+$area-dark-yellow-background: #fcf6b1;
+$area-autum-background: #eeafb8;
+$area-grey-background: #f6f6f6;
+
+// border
+$primary-border-color: $text-black-20;
+$primary-border-radius: 8px;
+
+$blue: #28636b;
+$background-color: #f0f0f0;
+$light-gray: #f8f8f8;
+$white: #ffffff;
+$success-green: #5ff29a;
+$alert-red: #ff5656;
+$light-text: #d3d6d6;
+$text: #929798;
+$dark-text: #4f5858;
+$light-gray: #f6f6f6;
+$gray: #f0f1f1;
+$dark-gray: $dark-text;
+$background-color: $light-gray;

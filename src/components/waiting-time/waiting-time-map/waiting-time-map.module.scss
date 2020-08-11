@@ -1,0 +1,315 @@
+@import '../../../sass/utils/abstract';
+
+.mainContainer {
+  > div {
+    padding: 10px 20px;
+  }
+}
+
+.content {
+  margin: 25px 16px 20px 10px;
+  position: relative;
+  max-height: 533px;
+  min-height: 532px;
+  overflow: auto;
+  .spinnerContainer {
+    min-height: 400px;
+  }
+}
+.map {
+  position: relative;
+  transform-origin: top left;
+  animation: fadeIn ease 1000ms;
+  -webkit-animation: fadeIn ease 1000ms;
+  -moz-animation: fadeIn ease 1000ms;
+  -o-animation: fadeIn ease 1000ms;
+  -ms-animation: fadeIn ease 1000ms;
+}
+.indicators {
+  .indicatorWrapper {
+    // z-index: 2;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+  }
+}
+.indicatorBackground {
+  background: $chart-tracking;
+  opacity: 0.5;
+  filter: blur(20px);
+  width: 100%;
+  height: 100%;
+}
+.indicator {
+  margin-top: -100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: $chart-tracking;
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  border: 2px solid $background-white;
+  box-shadow: 0px 0px 4.00001px rgba(0, 0, 0, 0.45),
+    inset 0px 0px 7.20002px rgba(0, 0, 0, 0.25);
+  // filter: blur(20px);
+  cursor: pointer;
+
+  .status {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    border: 2px solid $background-white;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+  .icon {
+    margin: auto;
+  }
+}
+
+// tooltip
+.tooltip {
+  pointer-events: none;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  z-index: 10;
+  width: 90px;
+  height: 90px;
+  border-radius: $primary-border-radius;
+  padding: 8px;
+  box-shadow: $primary-box-shadow;
+  background: $background-white;
+}
+
+.tooltipContent {
+  border: 1px solid $text-black-20;
+  border-radius: $primary-border-radius;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  .status {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    border: 2px solid $background-white;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: $primary-box-shadow;
+  }
+  .status-new {
+    svg {
+      circle {
+        fill: $traffic-green;
+      }
+    }
+  }
+  .status-wait-short {
+    svg {
+      circle {
+        fill: $area-yellow-text;
+      }
+    }
+  }
+  .status-wait-long {
+    svg {
+      circle {
+        fill: $area-purple-text;
+      }
+    }
+  }
+  .waitingTime {
+    text-align: center;
+    margin-top: 10px;
+    .value {
+      color: $chart-blue-100;
+      line-height: 14px;
+    }
+    .unit {
+      color: $chart-blue-100;
+    }
+  }
+  .label {
+    margin-top: 5px;
+    color: $background-black;
+    font-size: 9px;
+  }
+  .people {
+    color: $text-black-50;
+    font-size: 9px;
+  }
+}
+
+// controls for zoom in, out
+.controls {
+  position: absolute;
+  // right: 10px;
+  // top: 0px;
+  right: 50px;
+  top: 70px;
+  z-index: 3;
+
+  .control {
+    width: 29px;
+    height: 29px;
+    background: rgba($area-blue-background, 0.3);
+    border-radius: 50%;
+    margin-bottom: 11px;
+    display: flex;
+    cursor: pointer;
+  }
+}
+
+// footer
+.footer {
+  margin: 20px 9px 0px 8px;
+  > div {
+    padding: 18px 16px 13px;
+  }
+}
+.helpers {
+  display: flex;
+  margin-bottom: 16px;
+  .status {
+    display: flex;
+  }
+  .icon {
+    display: flex;
+  }
+  .name {
+    font-weight: normal;
+    margin-left: 6px;
+    margin-right: 32px;
+    display: flex;
+    align-items: center;
+  }
+  &:last-child {
+    margin: 0;
+    margin-left: -4px;
+    .name {
+      margin-right: 40px;
+    }
+  }
+}
+// set icon colors
+.icon-customer {
+  svg {
+    circle {
+      fill: $traffic-blue;
+    }
+  }
+}
+.icon-customer-support {
+  svg {
+    circle {
+      fill: $primary-green;
+    }
+  }
+}
+.icon-wait-short {
+  svg {
+    circle {
+      fill: $area-yellow-text;
+    }
+  }
+}
+.icon-wait-long {
+  svg {
+    circle {
+      fill: $area-purple-text;
+    }
+  }
+}
+.icon-new-customer {
+  svg {
+    circle {
+      fill: $traffic-green;
+    }
+  }
+}
+.icon-help {
+  svg {
+    circle {
+      fill: $traffic-red;
+    }
+  }
+}
+
+.indicator,
+.customerDetails {
+  .icon {
+    svg {
+      path {
+        fill: $background-white;
+        stroke: transparent;
+      }
+      path[stroke-linecap='round'] {
+        fill: transparent;
+        stroke: $background-white;
+      }
+      rect,
+      circle {
+        stroke: $background-white;
+      }
+    }
+  }
+  .status-new {
+    svg {
+      circle {
+        fill: $traffic-green;
+      }
+    }
+  }
+  .status-wait-short {
+    svg {
+      circle {
+        fill: $area-yellow-text;
+      }
+    }
+  }
+  .status-wait-long {
+    svg {
+      circle {
+        fill: $area-purple-text;
+      }
+    }
+  }
+}
+
+.icon-male,
+.icon-female,
+.icon-determination {
+  svg {
+    path {
+      fill: $chart-tracking;
+      stroke: transparent;
+    }
+    path[stroke-linecap='round'] {
+      fill: transparent;
+      stroke: $chart-tracking;
+    }
+    rect,
+    circle {
+      stroke: $chart-tracking;
+    }
+  }
+}
+
+.control {
+  svg {
+    path {
+      fill: $chart-blue-100;
+      stroke: transparent;
+    }
+    path[stroke-linecap='round'] {
+      fill: transparent;
+      stroke: $chart-blue-100;
+    }
+    rect,
+    circle {
+      stroke: $chart-blue-100;
+    }
+  }
+}

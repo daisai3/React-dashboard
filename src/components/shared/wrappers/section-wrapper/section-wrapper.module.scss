@@ -1,0 +1,15 @@
+@import '../../../../sass/utils/abstract';
+
+.mainWrapper {
+  border: 1px solid $primary-border-color;
+  box-sizing: border-box;
+  border-radius: $primary-border-radius;
+  padding: 13px 17px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.blue-wrapper {
+  border-color: $chart-blue-100;
+}

@@ -1,0 +1,24 @@
+@import '../../../sass/utils/abstract';
+
+.mainWrapper {
+  margin-top: 36px;
+  padding-top: 5px;
+  max-height: 625px;
+  overflow-y: auto;
+  overflow: auto;
+  position: relative;
+  > div:last-child {
+    margin-bottom: 0px !important;
+  }
+}
+
+.spinnerContainer {
+  min-height: 200px;
+}
+
+.emptyLabelContainer {
+  > div {
+    min-height: 200px;
+    margin-top: -45px;
+  }
+}

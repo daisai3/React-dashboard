@@ -1,0 +1,30 @@
+@import '../../../sass/utils/abstract';
+
+.bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: px2rem(35);
+  padding-bottom: px2rem(10);
+  background-color: $white;
+  border-radius: px2rem(4);
+
+  overflow: scroll;
+  width: 85%;
+  height: 85%;
+}

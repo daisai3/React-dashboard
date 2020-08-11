@@ -1,0 +1,124 @@
+@import '../../../../sass/utils/abstract';
+
+.bgWrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    > div {
+      position: absolute;
+      width: 100%;
+    }
+  }
+}
+
+.zone {
+  height: 100%;
+  position: relative;
+
+  polygon {
+    stroke-width: 4;
+  }
+}
+
+.zone-entry,
+.zone-exit {
+  &--border {
+    polygon {
+      stroke: $area-blue-background;
+      fill: transparent;
+    }
+  }
+  &--filled {
+    polygon {
+      stroke: transparent;
+      fill: $area-blue-background;
+    }
+  }
+  &--selected {
+    polygon {
+      stroke: $area-blue-background;
+      fill: rgba($area-blue-background, 0.5);
+    }
+  }
+}
+.zone-waiting {
+  &--border {
+    polygon {
+      stroke: $area-red-background;
+      fill: transparent;
+    }
+  }
+  &--filled {
+    polygon {
+      stroke: transparent;
+      fill: $area-red-background;
+    }
+  }
+  &--selected {
+    polygon {
+      stroke: $area-red-background;
+      fill: rgba($area-red-background, 0.5);
+    }
+  }
+}
+.zone-interaction {
+  &--border {
+    polygon {
+      stroke: $area-blue-background;
+      fill: transparent;
+    }
+  }
+  &--filled {
+    polygon {
+      stroke: transparent;
+      fill: $area-blue-background;
+    }
+  }
+  &--selected {
+    polygon {
+      stroke: $area-blue-background;
+      fill: rgba($area-blue-background, 0.5);
+    }
+  }
+}
+
+.zone-support {
+  &--border {
+    polygon {
+      stroke: $area-purple-background;
+      fill: transparent;
+    }
+  }
+  &--filled {
+    polygon {
+      stroke: transparent;
+      fill: $area-purple-background;
+    }
+  }
+  &--selected {
+    polygon {
+      stroke: $area-purple-background;
+      fill: rgba($area-purple-background, 0.5);
+    }
+  }
+}
+
+.labelWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .label {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 5;
+    -webkit-text-stroke: 1px white;
+  }
+}

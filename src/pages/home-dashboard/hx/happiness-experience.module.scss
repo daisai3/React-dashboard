@@ -1,0 +1,31 @@
+@import '../../../sass/utils/abstract';
+
+.infoModalWrapper {
+  position: absolute;
+  left: 209px;
+  top: 22px;
+  z-index: 999;
+}
+
+.mainWrapper {
+  margin-top: 37px;
+  position: relative;
+
+  .graphWrapper {
+    height: 165px;
+  }
+
+  .bottomWrapper {
+    display: flex;
+    align-items: stretch;
+    margin: 0px -8px;
+    margin-top: 20px;
+    min-height: 105px;
+    .liveHxWrapper {
+      width: 33.33%;
+    }
+    .summaryWrapper {
+      width: 66.67%;
+    }
+  }
+}

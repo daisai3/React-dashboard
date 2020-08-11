@@ -1,0 +1,36 @@
+@import '../../../sass/utils/abstract';
+
+.mainWrapper {
+  margin-left: -8px;
+  margin-top: 24px;
+  position: relative;
+  display: flex;
+}
+.left {
+  width: 279px;
+  margin: 0px 8px;
+  .hxArea {
+    margin-top: 20px;
+  }
+  .customerList {
+    margin-top: 20px;
+  }
+}
+
+.right {
+  margin: 0px 8px;
+  width: calc(100% - 310px);
+
+  // border: 1px solid $primary-border-color;
+  // box-sizing: border-box;
+  // border-radius: $primary-border-radius;
+  // padding: 16px;
+  // margin-left: 16px;
+  // width: 100%;
+  // max-width: calc(100% - 255px);
+  // position: relative;
+  // height: 100%;
+  // .title {
+  //   margin-bottom: 19px;
+  // }
+}

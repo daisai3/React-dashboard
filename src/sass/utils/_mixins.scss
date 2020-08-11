@@ -1,0 +1,22 @@
+// breakpoints
+$sm: 375px;
+$md: 768px;
+$lg: 1500px;
+
+@mixin media($class) {
+  @if $class == sm {
+    @media screen and (min-width: $sm) {
+      @content;
+    }
+  } @else if $class == md {
+    @media (min-width: ($md)) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media (min-width: ($lg)) {
+      @content;
+    }
+  } @else {
+    @warn 'Breakpoint mixin supports: sm, md, lg';
+  }
+}

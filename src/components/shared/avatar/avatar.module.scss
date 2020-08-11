@@ -1,0 +1,58 @@
+@import '../../../sass/utils/abstract';
+
+.avatar {
+  border-radius: 50%;
+  display: block;
+}
+
+.imgWrapper {
+  position: relative;
+}
+
+.overlay {
+  display: none;
+  height: 100%;
+  width: 100%;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: rgba($dark-gray, 0.5);
+  position: absolute;
+  border-radius: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.iconWrapper {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 24px;
+  height: 24px;
+  background: $primary-green;
+  border: 1.5px solid $background-white;
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: flex;
+  svg {
+    path {
+      fill: $background-white;
+      stroke: transparent;
+    }
+    path[stroke-linecap='round'] {
+      fill: transparent;
+      stroke: $background-white;
+    }
+    rect,
+    circle {
+      stroke: $background-white;
+    }
+  }
+}
+
+.imgWrapper:hover {
+  .overlay {
+    display: block;
+  }
+}

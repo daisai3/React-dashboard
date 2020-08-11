@@ -1,0 +1,58 @@
+@import '../../../sass/utils/abstract';
+
+.switchWrapper {
+  border: 1px solid $primary-green;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 2px;
+  display: flex;
+}
+
+.divider {
+  opacity: 0.2;
+  background: $primary-green;
+  width: 1px;
+  margin: 2px;
+}
+
+.option {
+  width: 30px;
+  height: 20px;
+  svg {
+    margin: auto;
+    path {
+      fill: $primary-green;
+      stroke: transparent;
+    }
+    path[stroke-linecap='round'] {
+      fill: transparent;
+      stroke: $primary-green;
+    }
+    rect,
+    circle {
+      stroke: $primary-green;
+    }
+  }
+}
+
+.activeOption {
+  background: $primary-green;
+  box-shadow: 0px 0px 8.88889px rgba(0, 0, 0, 0.08),
+    0px 1.11111px 4.44444px rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  svg {
+    margin: auto;
+    path {
+      fill: $background-white;
+      stroke: transparent;
+    }
+    path[stroke-linecap='round'] {
+      fill: transparent;
+      stroke: $background-white;
+    }
+    rect,
+    circle {
+      stroke: $background-white;
+    }
+  }
+}

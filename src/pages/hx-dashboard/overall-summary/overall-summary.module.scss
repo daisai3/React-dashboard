@@ -1,0 +1,43 @@
+@import '../../../sass/utils/abstract';
+
+.infoModalWrapper {
+  position: absolute;
+  left: 209px;
+  top: 22px;
+  z-index: 999;
+}
+
+.mainWrapper {
+  margin-top: 37px;
+  position: relative;
+  display: flex;
+}
+.leftWrapper {
+  width: 239px;
+  .liveHx {
+    height: 105px;
+  }
+  .daySummary {
+    margin-top: 12px;
+    height: 105px;
+  }
+}
+
+.graphWrapper {
+  border: 1px solid $primary-border-color;
+  box-sizing: border-box;
+  border-radius: $primary-border-radius;
+  padding: 16px;
+  margin-left: 16px;
+  width: 100%;
+  max-width: calc(100% - 255px);
+  position: relative;
+  height: 100%;
+  .title {
+    margin-bottom: 19px;
+  }
+}
+
+.spinnerContainer {
+  height: 149px;
+}

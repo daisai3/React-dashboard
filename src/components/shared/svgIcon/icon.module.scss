@@ -1,0 +1,11 @@
+@import '../../../sass/utils/abstract';
+
+.iconWrapper {
+  margin: auto;
+  > div {
+    display: flex;
+    svg {
+      height: auto;
+    }
+  }
+}

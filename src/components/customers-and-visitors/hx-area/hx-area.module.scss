@@ -1,0 +1,97 @@
+@import '../../../sass/utils/abstract';
+
+.content {
+  margin: 0px -9px;
+  height: 136px;
+  margin-top: 16px;
+}
+
+.buttons {
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 4px;
+  max-height: 136px;
+  overflow-y: auto;
+
+  button {
+    border-radius: 100px;
+    padding: 6px 10px;
+    min-height: 24px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    align-items: center;
+    width: 123px;
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-top: 0px;
+    }
+  }
+}
+
+// spinner
+.spinnerContainer {
+  min-height: 152px;
+}
+
+// color buttons
+.btn-entry,
+.btn-exit {
+  background: $area-grey-background;
+  span {
+    color: $area-blue-text;
+  }
+  &.btn-active {
+    background: $area-blue-text;
+    box-shadow: 0 0 2px 1px $area-blue-text;
+  }
+}
+
+.btn-waiting {
+  background: $area-red-background;
+  span {
+    color: $area-red-text;
+  }
+  &.btn-active {
+    background: $area-red-text;
+    box-shadow: 0 0 2px 1px $area-red-text;
+  }
+}
+
+.btn-interaction {
+  background: $area-blue-background;
+  span {
+    color: $area-blue-text;
+  }
+  &.btn-active {
+    background: $area-blue-text;
+    box-shadow: 0 0 2px 1px $area-blue-text;
+  }
+}
+
+.btn-support {
+  background: $area-purple-background;
+  span {
+    color: $area-purple-text;
+  }
+  &.btn-active {
+    background: $area-purple-text;
+    box-shadow: 0 0 2px 1px $area-purple-text;
+  }
+}
+
+// active/inactive buttons
+.btn-active {
+  border: 1px solid $background-white;
+  span {
+    color: $background-white !important;
+  }
+}
+.btn-inactive {
+  background: $area-grey-background !important;
+  span {
+    color: $text-black-30 !important;
+  }
+}

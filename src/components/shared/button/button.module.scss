@@ -1,0 +1,60 @@
+@import '../../../sass/utils/abstract';
+
+.button {
+  position: relative;
+  padding: px2rem(4) px2rem(8);
+  border-radius: 12px;
+  font-size: px2rem(14px);
+  font-weight: 500;
+  &.long {
+    font-weight: 600;
+    font-size: px2rem(16px);
+    padding: px2rem(4) px2rem(30) px2rem(4) px2rem(20);
+  }
+}
+
+.long {
+  svg {
+    font-weight: 100;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: px2rem(10);
+    margin: auto 0;
+    width: px2rem(12);
+  }
+}
+
+.primary {
+  color: $white;
+  background-color: $primary-green;
+  &:hover {
+    background-color: darken($primary-green, 10%);
+  }
+}
+
+.info {
+  color: $text;
+  border: 1px solid darken($white, 20%);
+  background-color: $white;
+  &:hover {
+    background-color: darken($white, 10%);
+  }
+}
+
+.alert {
+  color: $white;
+  background-color: $alert-red;
+  &:hover {
+    background-color: darken($alert-red, 10%);
+  }
+}
+
+.success {
+  color: $white;
+  background-color: $success-green;
+  &:hover {
+    background-color: darken($success-green, 10%);
+  }
+}

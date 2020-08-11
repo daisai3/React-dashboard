@@ -1,0 +1,120 @@
+@import '../../../sass/utils/abstract';
+
+.mainContainer {
+  margin-bottom: 33px;
+}
+.title {
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  span {
+    font-weight: 900;
+    background: $background-white;
+    padding: 0px 10px;
+  }
+  .blue-text {
+    color: $chart-blue-100;
+  }
+}
+
+.content {
+  display: flex;
+  padding: 2px 0px;
+  overflow-x: auto;
+
+  .blockWrapper {
+    margin-right: 24px;
+  }
+  .progressBlockWrapper {
+    > div {
+      width: 192px;
+      height: 152px;
+    }
+  }
+}
+
+.icon {
+  border: 1px solid $chart-blue-30;
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  svg {
+    path {
+      fill: $chart-blue-100;
+      stroke: transparent;
+    }
+    path[stroke-linecap='round'] {
+      fill: transparent;
+      stroke: $chart-blue-100;
+    }
+    rect,
+    circle {
+      stroke: $chart-blue-100;
+    }
+  }
+}
+.name {
+  margin-top: 12px;
+  line-height: 16px;
+}
+.info {
+  margin-top: 4px;
+  font-weight: 500;
+  color: $text-black-50;
+}
+.arrows {
+  position: absolute;
+  top: 36px;
+  right: -38px;
+  display: flex;
+  span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $chart-blue-30;
+    display: block;
+    margin-right: 8px;
+  }
+}
+.lastArrow {
+  top: 30px;
+  right: -34px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  svg {
+    path {
+      fill: $area-blue-text;
+      stroke: transparent;
+    }
+    path[stroke-linecap='round'] {
+      fill: transparent;
+      stroke: $area-blue-text;
+    }
+  }
+}
+// final block
+.finalBlock {
+  margin-top: 8px;
+  margin-left: 16px;
+  margin-right: 0px !important;
+  width: 100%;
+  min-width: 200px;
+  > div {
+    background: $chart-blue-10;
+    padding: 24px;
+    height: auto;
+  }
+}
+
+.description {
+  color: $area-blue-text;
+  line-height: 20px;
+  font-weight: normal;
+  max-height: 100%;
+  overflow: hidden;
+}

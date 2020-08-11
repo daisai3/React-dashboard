@@ -1,0 +1,101 @@
+@import '../../../sass/utils/abstract';
+
+.mainContainer {
+  width: 100%;
+  display: flex;
+}
+.options {
+  position: absolute;
+  right: 0px;
+  top: -50px;
+}
+
+.entranceWrapper {
+  padding: 18px 12px;
+  border-radius: $primary-border-radius;
+  background: $chart-blue-10;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 16px;
+
+  .pieChart {
+    width: 64px;
+    height: 64px;
+    margin-left: 10px;
+  }
+  .entranceInfo {
+    .entranceTitle {
+      font-weight: bold;
+      line-height: 14px;
+    }
+  }
+  .entranceStatus {
+    font-weight: normal;
+    display: flex;
+    .label {
+      opacity: 0.5;
+      margin-right: 8px;
+      font-weight: normal;
+      line-height: 16px;
+    }
+    .value {
+      font-weight: normal;
+      line-height: 16px;
+    }
+  }
+  .mainEntranceStatus {
+    margin-top: 12px;
+    .value {
+      color: $chart-blue-100;
+    }
+  }
+  .secondaryEntranceStatus {
+    margin-top: 7px;
+    .value {
+      color: $chart-blue-50;
+    }
+  }
+}
+
+.areas {
+  display: flex;
+  overflow-x: auto;
+  max-width: calc(100% - 260px);
+  padding-bottom: 5px;
+}
+
+.area {
+  padding: 17px 24px;
+  background: $chart-blue-10;
+  border-radius: $primary-border-radius;
+  margin-right: 16px;
+  min-width: 120px;
+
+  .value {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid $chart-blue-50;
+    box-sizing: border-box;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    line-height: 36px;
+    color: $chart-blue-100;
+    align-items: center;
+    display: flex;
+    span {
+      margin: auto;
+    }
+  }
+  .name {
+    font-weight: bold;
+    margin-top: 12px;
+  }
+
+  .spinnerContainer {
+    height: 16px;
+    width: 16px;
+    margin: auto;
+  }
+}

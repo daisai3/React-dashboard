@@ -1,0 +1,33 @@
+@import '../../sass/utils/abstract';
+
+.wrapperBox {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: white;
+  max-width: 400px;
+  min-height: 300px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 5px 0;
+
+  img {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  > label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: $dark-text;
+    > input,
+    > textarea {
+      border: 1px solid $gray;
+      border-radius: 6px;
+      padding: 5px;
+      color: $dark-text;
+    }
+  }
+}

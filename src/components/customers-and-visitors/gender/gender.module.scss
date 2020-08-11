@@ -1,0 +1,54 @@
+@import '../../../sass/utils/abstract';
+
+.mainContainer {
+  margin: 0px 8px;
+  height: 100%;
+}
+
+.titleWrapper {
+  margin-bottom: 8px;
+  .title {
+    font-weight: bold;
+  }
+}
+.contentWrapper {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.graphWrapper {
+  canvas {
+    width: 64px;
+  }
+}
+.statusWrapper {
+  margin-left: 16px;
+  .status {
+    font-weight: normal;
+    line-height: 20px;
+    .label {
+      opacity: 0.5;
+      margin-right: 8px;
+      font-weight: normal;
+    }
+    .value {
+      font-weight: normal;
+    }
+  }
+  .femaleStatus {
+    .value {
+      color: $chart-blue-100;
+    }
+  }
+  .maleStatus {
+    .value {
+      color: $chart-blue-50;
+    }
+  }
+}
+
+.spinnerContainer {
+  min-width: 64px;
+  min-height: 64px;
+}

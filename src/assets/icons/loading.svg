@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 546 548">
+    <defs>
+        <style>.cls-1{fill:#f1f1f1;}.cls-2{fill:green;}</style>
+        <linearGradient id="linear-gradient" x1="166.63" y1="51.06" x2="495.22" y2="200.58" gradientTransform="matrix(1, 0, 0, -1, 0, 548)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#7fbf42"/>
+            <stop offset="1" stop-color="#35755d"/>
+        </linearGradient>
+    </defs>
+    <title>Loading Spinner DEWA</title>
+    <path class="cls-1" d="M528,273c0,141.39-114.61,256-256,256S16,414.39,16,273,130.65,17,272,17,528,131.62,528,273ZM67.26,273c0,113.1,91.68,204.78,204.78,204.78S476.81,386.09,476.81,273,385.13,68.22,272,68.22,67.26,159.9,67.26,273Z"/>
+    <path class="cls-2" d="M448.52,421.1c10.83,9.09,12.33,25.35,2.2,35.23a256,256,0,0,1-354.27,3c-10.29-9.7-9.07-26,1.61-35.26h0c10.68-9.27,26.76-8,37.29,1.45a204.78,204.78,0,0,0,275.9-2.31c10.37-9.62,26.43-11.17,37.27-2.08Z"/>
+</svg>

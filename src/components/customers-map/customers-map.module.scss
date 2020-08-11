@@ -1,0 +1,48 @@
+@import '../../sass/utils/abstract';
+
+.zoomBtn {
+  position: sticky;
+  z-index: 100;
+  left: 5px;
+  top: 5px;
+  height: 0;
+  svg {
+    width: 16px;
+  }
+}
+.mapWrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+
+.mapImage {
+  margin: auto;
+  display: inline-block;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: left;
+  transform-origin: top left;
+
+  img {
+    object-fit: contain;
+    height: 100%;
+    visibility: hidden;
+    vertical-align: middle;
+  }
+}
+
+.customerDot {
+  position: absolute;
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.selectedCustomer {
+  border-color: $blue;
+}

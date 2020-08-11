@@ -1,0 +1,112 @@
+@import '../../../sass/utils/abstract';
+
+.mainContainer {
+  margin: 8px 0;
+  height: 100%;
+}
+
+.titleWrapper {
+  margin-bottom: 8px;
+  .title {
+    font-weight: bold;
+  }
+}
+.contentWrapper {
+  background-color: $chart-blue-10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+
+.singleWrapper {
+  flex: 1;
+  border-radius: 8px;
+  margin: 0px 4px;
+  padding: 16px;
+  background-color: $chart-blue-10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottomWrapper {
+  margin-top: 8px;
+  width: calc(100% + 8px);
+  margin-left: -4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.graphWrapper {
+  canvas {
+    width: 64px;
+  }
+}
+.statusWrapper {
+  .statusTitle {
+    margin-bottom: 12px;
+  }
+  .status {
+    font-weight: normal;
+    line-height: 20px;
+    .label {
+      opacity: 0.5;
+      margin-right: 8px;
+      font-weight: normal;
+    }
+    .value {
+      font-weight: normal;
+    }
+  }
+  .femaleStatus {
+    .value {
+      color: $chart-blue-100;
+    }
+  }
+  .maleStatus {
+    margin-top: 7px;
+    .value {
+      color: $chart-blue-50;
+    }
+  }
+}
+
+.spinnerContainer {
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.average {
+  .spinnerContainer {
+    min-height: 80px;
+  }
+  .bar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid $chart-blue-50;
+    box-sizing: border-box;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    line-height: 12px;
+    color: $chart-blue-100;
+    font-weight: 900;
+    display: flex;
+    .spinnerContainer {
+      height: 24px;
+      width: 24px;
+      margin: auto;
+      min-height: auto;
+    }
+    span {
+      margin: auto;
+    }
+  }
+  .label {
+    margin-top: 10px;
+  }
+}

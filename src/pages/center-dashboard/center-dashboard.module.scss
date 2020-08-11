@@ -1,0 +1,132 @@
+@import '../../sass/utils/abstract';
+
+.mainWrapper {
+  display: flex;
+  height: 100%;
+}
+
+.graphsWrapper {
+  flex: 6;
+  display: flex;
+  flex-flow: column;
+  padding-right: 20px;
+}
+
+.notifContainer {
+  margin-top: 15px;
+  padding: 15px;
+  height: 15%;
+  background: $white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08), 0px 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.graphsContainer {
+  width: 100%;
+  height: 40%;
+  margin-top: 15px;
+  padding: 15px;
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08), 0px 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.topCategories {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  height: 40%;
+  > div {
+    flex: 1;
+    margin-right: 24px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.officerColumn {
+  flex: 2;
+  background-color: $white;
+  height: 100%;
+  padding: 30px 10px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08), 0px 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.officerCounter {
+  border-radius: 10px;
+  background-color: $white;
+  box-shadow: 0 0 5px 1px;
+  position: absolute;
+  overflow-y: auto;
+  top: -10px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  padding: 5px 20px 5px 5px;
+  svg {
+    color: blue;
+    margin: 0 6px;
+    width: 20px;
+  }
+}
+
+.focusNumber {
+  font-size: 66px;
+  margin: 10px 0;
+  @include media(lg) {
+    font-size: 100px;
+  }
+}
+
+.waitingTimeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.topBox {
+  margin: 10px auto;
+  height: 50%;
+  width: 80%;
+}
+
+.columnCentered {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.mainNumber {
+  font-size: 58px;
+  @include media(lg) {
+    font-size: 100px;
+  }
+}
+
+.mapContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 30%;
+  padding: 0 20px;
+  overflow-y: auto;
+}
+
+.mapItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.centeredBtn {
+  position: absolute !important;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}

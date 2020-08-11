@@ -1,0 +1,25 @@
+@import '../../../sass/utils/abstract';
+
+.mainWrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20%;
+}
+
+.circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: $gray;
+}
+
+.bar {
+  background-color: $gray;
+  height: 6px;
+  flex: 1;
+  align-self: center;
+}
+
+.active {
+  background-color: $primary-green;
+}

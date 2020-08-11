@@ -1,0 +1,118 @@
+@import '../../../sass/utils/abstract';
+
+.filterContainer {
+  display: flex;
+  margin-top: 32px;
+}
+
+.filterOption {
+  font-weight: bold;
+  line-height: 22px;
+  color: $text-black-100;
+  opacity: 0.4;
+  margin-right: 48px;
+  padding: 6px;
+  min-width: 70px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.active {
+  border-bottom: 4px solid $primary-green;
+  opacity: 1;
+  .text {
+    color: $primary-green;
+  }
+}
+
+.btnWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.toogleBtn {
+  color: $primary-green;
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 12px;
+  background: $background-white;
+  box-shadow: $primary-box-shadow;
+  border-radius: $primary-border-radius;
+  outline: none;
+  display: flex;
+  align-items: center;
+  .label {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  svg {
+    path {
+      fill: $primary-green;
+      stroke: transparent;
+    }
+    path[stroke-linecap='round'] {
+      fill: transparent;
+      stroke: $primary-green;
+    }
+    rect,
+    circle {
+      stroke: $primary-green;
+    }
+  }
+}
+
+.backBtn {
+  margin-right: 37px;
+  height: 40px;
+  min-width: 100px;
+  .icon {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+.calendarBtn {
+  height: 31px;
+  min-width: 104px;
+  > div {
+    margin: inherit;
+  }
+}
+
+.activeCalendarBtn {
+  background: $primary-green;
+  color: $background-white;
+  border-radius: 100px;
+  svg {
+    path {
+      fill: $background-white;
+      stroke: transparent;
+    }
+    path[stroke-linecap='round'] {
+      fill: transparent;
+      stroke: $background-white;
+    }
+    rect,
+    circle {
+      stroke: $background-white;
+    }
+  }
+}
+
+.calendarFilterWrapper {
+  position: relative;
+  z-index: 9;
+  .calendarFilter {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 375px;
+  }
+}

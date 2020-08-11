@@ -1,0 +1,49 @@
+@import '../../../sass/utils/abstract';
+
+.dropdownWrapper {
+  position: relative;
+  svg {
+    path[stroke-linecap='round'] {
+      fill: $chart-blue-100;
+      stroke: $chart-blue-100;
+    }
+    circle {
+      stroke: $chart-blue-100;
+    }
+  }
+}
+
+.dropdown {
+  position: absolute;
+  right: 15px;
+  bottom: -58px;
+  background: $background-white;
+  padding: 4px 0px;
+  box-shadow: $primary-box-shadow;
+  z-index: 101;
+  width: 100px;
+}
+.row {
+  margin: 0px 8px;
+  padding: 0px 8px;
+  border-bottom: 1px solid $text-black-20;
+
+  &:hover {
+    background: $text-black-30;
+  }
+  &:last-child {
+    border: none;
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: $text-black-50;
+  padding: 8px 0px;
+  font-weight: normal;
+}
+.iconWrapper {
+  display: flex;
+}

@@ -1,0 +1,58 @@
+@import '../../../sass/utils/abstract';
+
+.mainContainer {
+  height: 100%;
+}
+
+.titleWrapper {
+  margin-bottom: 8px;
+  .title {
+    font-weight: bold;
+  }
+}
+.contentWrapper {
+  max-height: 92px;
+  height: calc(100% - 24px);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  .label {
+    margin-right: 28px;
+    font-weight: 500;
+    line-height: 20px;
+    width: 146px;
+    opacity: 0.5;
+  }
+  .progress {
+    width: calc(100% - 225px);
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+.progress {
+  .bar {
+    height: 12px;
+    width: 100%;
+    background: $chart-blue-100;
+    border-radius: 100px;
+  }
+  .value {
+    position: absolute;
+    margin-left: 100%;
+    padding-left: 8px;
+    white-space: nowrap;
+    font-weight: 500;
+    color: $chart-blue-100;
+  }
+}

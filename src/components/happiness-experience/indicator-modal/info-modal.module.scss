@@ -1,0 +1,97 @@
+@import '../../../sass/utils/abstract';
+
+.mainContainer {
+  width: 426px;
+  height: 245px;
+  box-shadow: $primary-box-shadow;
+  border-radius: $primary-border-radius;
+  background: $background-white;
+  padding: 40px 16px 16px 24px;
+}
+
+.indicator {
+  width: 180px;
+  .indicatorTitle {
+    line-height: 17px;
+  }
+  .indicatorDesc {
+    margin-top: 8px;
+    line-height: 20px;
+    font-weight: normal;
+    color: $text-black-50;
+  }
+}
+
+.actionWrapper {
+  position: absolute;
+  top: 9px;
+  right: 0px;
+  button {
+    path {
+      stroke: $text-black-30;
+    }
+  }
+}
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.colorsWrapper {
+  height: 100%;
+  width: 189px;
+  border: 1px solid $gray;
+  box-sizing: border-box;
+  border-radius: $primary-border-radius;
+  padding: 16px;
+
+  .colorWrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    border-left: 1px solid $chart-blue-50;
+    border-top: 1px dashed $chart-blue-50;
+    width: 129px;
+    float: right;
+    &:last-child {
+      border-bottom: 1px dashed $chart-blue-50;
+    }
+  }
+}
+
+.tick {
+  position: absolute;
+  top: -7px;
+  left: -25px;
+  width: 20px;
+  text-align: right;
+  color: $chart-blue-50;
+}
+.zeroTick {
+  bottom: -6px;
+  top: auto;
+}
+
+.color {
+  width: 104px;
+  height: 40px;
+  color: $background-white;
+  border-radius: 4px;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  span {
+    margin: auto;
+  }
+}
+.goodColor {
+  background: $traffic-green;
+}
+.mediumColor {
+  background: $traffic-yellow;
+  height: 56px;
+}
+.badColor {
+  background: $traffic-red;
+}

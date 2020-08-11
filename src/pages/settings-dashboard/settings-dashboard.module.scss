@@ -1,0 +1,57 @@
+@import '../../sass/utils/abstract';
+
+.mainContainer {
+  height: 100%;
+  animation: fadeIn ease 0.5s;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logout {
+  button {
+    border-radius: 100px;
+    box-shadow: $primary-box-shadow;
+    background: $background-white;
+    color: $primary-green;
+    padding-top: 11px;
+    padding-bottom: 12px;
+    line-height: 17px;
+    min-width: 133px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon {
+      margin-right: 12px;
+    }
+  }
+  svg {
+    path {
+      fill: $primary-green;
+      stroke: transparent;
+    }
+    path[stroke-linecap='round'] {
+      fill: transparent;
+      stroke: $primary-green;
+    }
+  }
+}
+
+.content {
+  margin-top: 24px;
+  .profileWrapper {
+    margin-top: 71px;
+    > div {
+      padding-bottom: 25px;
+    }
+  }
+
+  .centerWrapper {
+    margin-top: 24px;
+    > div {
+      padding-bottom: 50px;
+    }
+  }
+}

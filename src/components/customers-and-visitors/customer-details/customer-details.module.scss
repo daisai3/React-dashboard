@@ -1,0 +1,95 @@
+@import '../../../sass/utils/abstract';
+
+.titleWrapper {
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -6px;
+  margin-top: 18px;
+}
+
+.genderWrapper {
+  margin: 4px;
+  padding: 12px 8px 10px;
+  border-radius: $primary-border-radius;
+  background: $chart-blue-10;
+  width: calc(100% - 80px);
+  height: 86px;
+  display: flex;
+  justify-content: space-between;
+  .pieChart {
+    width: 64px;
+  }
+  .genderInfo {
+    .genderTitle {
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+  }
+  .genderStatus {
+    font-weight: normal;
+    line-height: 20px;
+    margin-top: 3px;
+    .label {
+      opacity: 0.5;
+      margin-right: 8px;
+      font-weight: normal;
+      line-height: 16px;
+    }
+    .value {
+      font-weight: normal;
+      line-height: 16px;
+    }
+  }
+  .femaleStatus {
+    .value {
+      color: $chart-blue-100;
+    }
+  }
+  .maleStatus {
+    .value {
+      color: $chart-blue-50;
+    }
+  }
+}
+
+.status {
+  padding: 10px 0px;
+  background: $chart-blue-10;
+  border-radius: $primary-border-radius;
+  width: calc(50% - 8px);
+  margin: 4px;
+
+  .value {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid $chart-blue-50;
+    box-sizing: border-box;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    line-height: 36px;
+    color: $chart-blue-100;
+    align-items: center;
+    display: flex;
+    span {
+      margin: auto;
+    }
+  }
+  .label {
+    font-weight: bold;
+    margin-top: 8px;
+  }
+
+  .spinnerContainer {
+    height: 16px;
+    width: 16px;
+    margin: auto;
+  }
+}
+
+.totalStatus {
+  width: 64px;
+}

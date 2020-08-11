@@ -1,0 +1,37 @@
+@import '../../../sass/utils/abstract';
+
+.input {
+  margin-top: px2rem(10);
+  font-size: px2rem(14);
+  p {
+    margin: 0;
+    margin-top: px2rem(3);
+    padding-bottom: 1px;
+    padding-left: px2rem(4);
+    color: inherit;
+  }
+  select {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    padding-top: px2rem(2);
+  }
+  option {
+    background-color: inherit;
+  }
+}
+
+.label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: solid rgba($white, 0.5) 1px;
+  font-weight: 500;
+  svg {
+    width: px2rem(10);
+  }
+}

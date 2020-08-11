@@ -1,0 +1,70 @@
+@import '../../sass/utils/abstract';
+
+.rowCentered {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.timeSelector {
+  width: 20%;
+  > button {
+    color: $white;
+    background-color: $gray;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 1px;
+    border-radius: 4px;
+    margin: 0 2px;
+    width: 16px;
+    height: 16px;
+    &.active {
+      background-color: $dark-gray;
+    }
+  }
+}
+
+.togglesCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.toggleWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.wrapper {
+  position: relative;
+  cursor: pointer;
+  width: px2rem(40);
+  height: px2rem(20);
+  border-radius: px2rem(10);
+  background-color: $white;
+  border: 1px solid $text;
+  transition: all 0.3s;
+  margin-left: 10px;
+}
+
+.indicator {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: px2rem(20);
+  height: px2rem(20);
+  border-radius: px2rem(10);
+  background-color: $gray;
+  transition: all 0.3s;
+  &.active {
+    right: px2rem(20);
+    background-color: $primary-green;
+  }
+}
+
+.fullHeight {
+  height: calc(100% - 50px);
+}

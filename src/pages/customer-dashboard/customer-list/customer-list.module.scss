@@ -1,0 +1,77 @@
+@import '../../../sass/utils/abstract';
+
+.mainWrapper {
+  margin-top: 24px;
+  position: relative;
+  max-height: calc(100% - 30px);
+  min-height: 150px;
+  overflow: auto;
+  .custom-table {
+    width: 100%;
+    min-width: 1200px;
+  }
+}
+
+.column {
+  width: 11.11%;
+}
+
+.spinnerContainer {
+  margin-top: 20px;
+  height: auto;
+}
+
+.infiniteScrollContainer {
+  // height: 300px !important;
+}
+
+.actionCell {
+  display: flex;
+}
+
+.action {
+  border-radius: 50%;
+  background: green;
+  // padding: 8px;
+  display: flex;
+  margin: 0px 2px;
+  width: 28px;
+  height: 28px;
+}
+
+.action-support {
+  background: $area-purple-background;
+  svg {
+    path {
+      fill: $area-purple-text;
+      stroke: transparent;
+    }
+    path[stroke-linecap='round'] {
+      fill: transparent;
+      stroke: $area-purple-text;
+    }
+    rect,
+    circle {
+      stroke: $area-purple-text;
+    }
+  }
+}
+
+.action-cdm,
+.action-devices {
+  background: $area-blue-background;
+  svg {
+    path {
+      fill: $area-blue-text;
+      stroke: transparent;
+    }
+    path[stroke-linecap='round'] {
+      fill: transparent;
+      stroke: $area-blue-text;
+    }
+    rect,
+    circle {
+      stroke: $area-blue-text;
+    }
+  }
+}

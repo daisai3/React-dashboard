@@ -1,0 +1,43 @@
+@import '../../../sass/utils/abstract';
+
+.mainContainer {
+  height: 100%;
+  .halfDonut {
+    margin: auto;
+    text-align: center;
+    margin-top: -8px;
+    width: auto !important;
+    > svg {
+      width: 90px;
+      height: 86px;
+    }
+  }
+}
+
+.status {
+  .percentage {
+    width: 48px;
+    margin: auto;
+    margin-top: -75px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    text-align: center;
+    color: $chart-blue-100;
+    line-height: 48px;
+    border-bottom: 1px solid $chart-blue-30;
+  }
+  .label {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      display: flex;
+    }
+    .text {
+      margin-left: 4px;
+    }
+  }
+}

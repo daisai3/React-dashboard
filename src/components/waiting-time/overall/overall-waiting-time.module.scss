@@ -1,0 +1,100 @@
+@import '../../../sass/utils/abstract';
+
+.mainContainer {
+  .titleWrapper {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    span {
+      font-weight: bold;
+    }
+  }
+  .contentWrapper {
+    display: flex;
+  }
+}
+
+.contentWrapper {
+  margin: 0px -4px;
+  .average {
+    padding: 15px 5px;
+    background: $chart-blue-10;
+    border-radius: 8px;
+    width: calc(50% - 4px);
+    margin: 0px 4px;
+  }
+  .statusContainer {
+    padding-left: 16px;
+    border-left: 1px solid $chart-blue-50;
+    color: $chart-blue-50;
+    box-sizing: border-box;
+    width: calc(100% - 105px);
+    margin: 6px 0px;
+  }
+}
+.average {
+  .spinnerContainer {
+    min-height: 80px;
+  }
+  .bar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #b7d2e1;
+    box-sizing: border-box;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    line-height: 36px;
+    color: $chart-blue-100;
+    font-weight: 900;
+    display: flex;
+    .spinnerContainer {
+      height: 24px;
+      width: 24px;
+      margin: auto;
+      min-height: auto;
+    }
+    span {
+      margin: auto;
+    }
+  }
+  .label {
+    margin-top: 10px;
+  }
+}
+.statusContainer {
+  .scrollableWrapper {
+    max-height: 48px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 4px;
+  }
+  .status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+}
+
+.status {
+  .label {
+    font-weight: 500;
+    margin-right: 12px;
+    line-height: 20px;
+    opacity: 0.5;
+  }
+  .boldLabel {
+    color: $text-black-100;
+    font-weight: bold;
+  }
+  .progress {
+    width: calc(100% - 205px);
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}

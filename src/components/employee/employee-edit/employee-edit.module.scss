@@ -1,0 +1,84 @@
+@import '../../../sass/utils/abstract';
+
+.employeeModel {
+  // width: auto;
+  width: auto;
+  height: auto;
+  align-items: unset;
+  padding: 16px 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  .title {
+  }
+  .closeBtn {
+    cursor: pointer;
+  }
+}
+
+.content {
+  display: flex;
+  margin-top: 18px;
+  position: relative;
+}
+
+.left {
+  width: 262px;
+  text-align: center;
+  margin-right: 40px;
+  padding: 20px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+  .avatar {
+    width: 80px;
+    margin: auto;
+  }
+  .name {
+    margin-top: 20px;
+  }
+  .role {
+    margin-top: 2px;
+    font-weight: normal;
+  }
+}
+
+.right {
+  width: 700px;
+}
+
+// inputs
+.inputsWrapper {
+  border-left: 1px solid $text-black-20;
+  padding-left: 42px;
+  padding-top: 8px;
+  padding-bottom: -13px;
+  .inputs {
+    display: flex;
+    margin: 0px -8px;
+    margin-top: 33px;
+    flex-wrap: wrap;
+    width: calc(100% + 16px);
+  }
+}
+.input {
+  width: calc(33.33% - 16px);
+  margin: 0px 8px;
+  margin-bottom: 28px;
+}
+
+// save btn
+.btnWrapper {
+  margin-top: 9px;
+  padding-left: 42px;
+
+  .saveBtn {
+    padding-top: 15px;
+    padding-bottom: 16px;
+    background: $primary-green;
+    // opacity: 0.4;
+    border-radius: 4px;
+    width: 200px;
+    color: $background-white;
+  }
+}

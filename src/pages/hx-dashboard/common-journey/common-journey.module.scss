@@ -1,0 +1,19 @@
+@import '../../../sass/utils/abstract';
+
+.mainWrapper {
+  margin-top: 15px;
+  padding-top: 5px;
+  max-height: 385px;
+  overflow: auto;
+  position: relative;
+  height: calc(100% - 37px);
+  > div:last-child {
+    margin-bottom: 0px !important;
+  }
+}
+
+.emptyWrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}

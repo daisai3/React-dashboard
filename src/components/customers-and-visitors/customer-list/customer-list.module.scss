@@ -1,0 +1,20 @@
+@import '../../../sass/utils/abstract';
+
+.titleWrapper {
+  .description {
+    display: block;
+    margin-top: 4px;
+    color: $text-black-50;
+    font-weight: 500;
+    line-height: 16px;
+  }
+}
+.content {
+  display: flex;
+  justify-content: flex-end;
+  .linkButton {
+    color: $primary-green;
+    font-weight: 900;
+    line-height: 18px;
+  }
+}

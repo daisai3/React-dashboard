@@ -1,0 +1,104 @@
+@import '../../sass/utils/abstract';
+
+.mainNavbar {
+  position: absolute;
+  width: 88px;
+  height: 100vh;
+  background: $background-white;
+  box-shadow: 4px 0px 16px rgba(0, 0, 0, 0.08);
+  .logoWrapper {
+    margin-top: 35px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .itemsWrapper {
+    position: absolute;
+    top: 96px;
+    width: 100%;
+  }
+}
+
+.itemWrapper {
+  text-align: center;
+  cursor: pointer;
+  height: 62px;
+  position: relative;
+  .item {
+    padding: 0px 28px;
+  }
+}
+.imgWrapper {
+  border-bottom: 1px solid rgba($primary-green, 0.2);
+  height: 62px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.itemActive {
+  .backgroundWrapper {
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $primary-green-gradient;
+    box-shadow: $primary-box-shadow;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    width: 104px;
+    height: 54px;
+    margin-left: -8px;
+    padding: 0px 36px;
+  }
+  .imgWrapper {
+    display: none;
+  }
+}
+
+.imgWrapper {
+  svg {
+    path {
+      fill: $text-black-30;
+      stroke: transparent;
+    }
+    path[stroke-linecap='round'] {
+      fill: transparent;
+      stroke: $text-black-30;
+    }
+    rect {
+      stroke: $text-black-30;
+    }
+  }
+}
+
+.backgroundWrapper {
+  svg {
+    path {
+      fill: $background-white;
+      stroke: transparent;
+    }
+    path[stroke-linecap='round'] {
+      fill: transparent;
+      stroke: $background-white;
+    }
+    rect {
+      stroke: $background-white;
+    }
+  }
+}
+
+.tooltip {
+  background: $background-white !important;
+  padding: 8px 12px;
+  box-shadow: $primary-box-shadow;
+  border-radius: 4px;
+  margin-left: 8px !important;
+  span {
+    opacity: 0.5;
+    font-weight: 500;
+    line-height: 12px;
+  }
+}

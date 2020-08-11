@@ -1,0 +1,31 @@
+@import '../../../sass/utils/abstract';
+
+.mainContainer {
+  height: 100%;
+  animation: fadeIn ease 0.5s;
+}
+
+.content {
+  margin-top: 24px;
+}
+
+.addBtnWrapper {
+  display: flex;
+  justify-content: flex-end;
+  .btn {
+    background: $primary-green;
+    border-radius: $primary-border-radius;
+    padding: 15px 33px 16px 34px;
+    color: $background-white;
+    line-height: 17px;
+  }
+}
+
+.employList {
+  margin-top: 24px;
+  height: calc(100vh - 200px);
+  > div {
+    padding-left: 12px;
+    padding-right: 24px;
+  }
+}

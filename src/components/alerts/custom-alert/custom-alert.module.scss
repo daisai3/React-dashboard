@@ -1,0 +1,78 @@
+@import '../../../sass/utils/abstract';
+
+.mainContainer {
+  margin-bottom: 10px;
+}
+
+.header {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  .titleWrapper {
+    .title {
+      font-weight: bold;
+    }
+    .time {
+      font-weight: 500;
+      color: $text-black-30;
+      line-height: 16px;
+    }
+  }
+  .bar {
+    margin-top: 4px;
+    background: $area-yellow-text;
+    border-radius: 100px;
+    height: 4px;
+    width: 32px;
+    &[data-type='Happiness Experience'] {
+      background: $area-yellow-text;
+    }
+    &[data-type='Waiting time'] {
+      background: $area-purple-text;
+    }
+    &[data-type='Customers & Visitors'] {
+      background: $area-green-text;
+    }
+  }
+  .icon {
+    display: flex;
+  }
+}
+
+.contentWrapper {
+  .alert {
+    margin-top: 8px;
+    font-weight: 500;
+  }
+  .recommendation {
+    background: $chart-blue-10;
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 8px;
+    .recommendationLabel {
+      color: $area-blue-text;
+    }
+    .recommendationText {
+      color: $area-blue-text;
+      margin-top: 2px;
+      font-weight: 500;
+    }
+  }
+}
+
+.icon {
+  svg {
+    path {
+      fill: $chart-blue-50;
+      stroke: transparent;
+    }
+    path[stroke-linecap='round'] {
+      fill: transparent;
+      stroke: $chart-blue-50;
+    }
+    rect,
+    circle {
+      stroke: $chart-blue-50;
+    }
+  }
+}

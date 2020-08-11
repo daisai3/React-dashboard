@@ -1,0 +1,44 @@
+@import '../../sass/utils/abstract';
+
+.container {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: px2rem(260);
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+  &.closed {
+    transform: translateX(px2rem(-195));
+  }
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: px2rem(40) px2rem(72) px2rem(40) px2rem(20);
+  color: $text;
+  background: $white;
+}
+
+.overlay {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba($dark-gray, 0.5);
+}
+
+.toggleBtn {
+  position: absolute;
+  top: px2rem(20);
+  right: px2rem(5);
+  cursor: pointer;
+  svg {
+    width: px2rem(6);
+  }
+}

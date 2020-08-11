@@ -1,0 +1,21 @@
+replicaCount: 1
+
+image:
+  pullSecret: gitlab-registry
+  pullPolicy: IfNotPresent
+
+resources:
+  limits:
+    cpu: "500m"
+    memory: 1Gi
+  requests:
+    cpu: "500m"
+    memory: 1Gi
+
+status_probe: "/login"
+
+service:
+  protocol: TCP
+  port: 80
+  http_port: 443
+  targetPort: 80

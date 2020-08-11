@@ -1,0 +1,20 @@
+@import '../../../sass/utils/abstract';
+
+.mainWrapper {
+  margin-top: 20px;
+  .topWrapper {
+    margin: 0px -8px;
+  }
+  .bottomWrapper {
+    display: flex;
+    align-items: stretch;
+    margin: 0px -8px;
+    margin-top: 16px;
+    .gender {
+      width: 50%;
+    }
+    .mask {
+      width: 50%;
+    }
+  }
+}

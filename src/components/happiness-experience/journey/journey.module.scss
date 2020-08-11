@@ -1,0 +1,96 @@
+@import '../../../sass/utils/abstract';
+
+.mainContainer {
+  margin-bottom: 33px;
+}
+.title {
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  span {
+    font-weight: 900;
+    background: $background-white;
+    padding: 0px 10px;
+  }
+  .blue-text {
+    color: $chart-blue-100;
+  }
+}
+
+.content {
+  display: flex;
+  padding: 2px 0px;
+  .blockWrapper {
+    margin-right: 16px;
+    width: 128px;
+    height: 128px;
+  }
+}
+.progressWrapper {
+  &:last-child {
+    .arrows {
+      display: none !important;
+    }
+  }
+}
+
+.icon {
+  border: 1px solid $chart-blue-30;
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  margin: auto;
+  svg {
+    path {
+      fill: $chart-blue-100;
+      stroke: transparent;
+    }
+    path[stroke-linecap='round'] {
+      fill: transparent;
+      stroke: $chart-blue-100;
+    }
+    rect,
+    circle {
+      stroke: $chart-blue-100;
+    }
+  }
+}
+.name {
+  margin-top: 12px;
+  text-align: center;
+  line-height: 16px;
+}
+.arrows {
+  position: absolute;
+  top: 36px;
+  right: -38px;
+  display: flex;
+  span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $chart-blue-30;
+    display: block;
+    margin-right: 8px;
+  }
+}
+
+// final block
+.description {
+  color: $area-blue-text;
+  line-height: 20px;
+  font-weight: normal;
+  margin: 0px -6px;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.finalBlock {
+  margin-left: 28px;
+  margin-right: 0px;
+  > div {
+    background: $chart-blue-10;
+  }
+}

@@ -1,0 +1,44 @@
+@import '../../sass/utils/abstract';
+
+.wrapperBox {
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  border-radius: 12px;
+  box-shadow: 0 0 5px 0;
+  padding: 20px;
+  form {
+    display: flex;
+  }
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  > label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: $dark-text;
+    > small {
+      color: $alert-red;
+    }
+    > input,
+    > textarea,
+    > select {
+      border: 1px solid $gray;
+      width: 50%;
+      border-radius: 6px;
+      padding: 5px;
+      color: $dark-text;
+    }
+  }
+}
+
+.pageTitle {
+  font-size: 18px;
+  margin-bottom: 15px;
+}

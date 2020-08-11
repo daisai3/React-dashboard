@@ -1,0 +1,30 @@
+@import '../../sass/utils/abstract';
+
+.mainContainer {
+  height: 100%;
+  animation: fadeIn ease 0.5s;
+}
+.content {
+  margin-top: 34px;
+  display: flex;
+  align-items: stretch;
+
+  .blocksWrapper {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -12px;
+    .blockWrapper {
+      width: calc(50% - 24px);
+      min-width: 440px;
+      margin: 0px 12px 24px;
+    }
+  }
+  .alertsWrapper {
+    width: 25%;
+    overflow: hidden;
+    margin-left: 24px;
+    padding-bottom: 24px;
+    overflow: visible;
+  }
+}

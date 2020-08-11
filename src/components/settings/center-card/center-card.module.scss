@@ -1,0 +1,94 @@
+@import '../../../sass/utils/abstract';
+
+.content {
+  display: flex;
+  margin-top: 18px;
+  position: relative;
+}
+
+.left {
+  width: 398px;
+  margin-right: 40px;
+  padding: 15px 15px 17px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+}
+.map {
+  width: fit-content;
+  margin: auto;
+  overflow: auto;
+  max-width: 100%;
+  max-height: 345px;
+  border-bottom: 1px solid $text-black-20;
+  position: relative;
+  animation: fadeIn ease 1000ms;
+  -webkit-animation: fadeIn ease 1000ms;
+  -moz-animation: fadeIn ease 1000ms;
+  -o-animation: fadeIn ease 1000ms;
+  -ms-animation: fadeIn ease 1000ms;
+}
+.infoWrapper {
+  margin-top: 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info {
+  text-align: initial;
+  .name {
+    margin-top: 2px;
+    color: $text-black-80;
+  }
+  .location {
+    font-weight: normal;
+    line-height: 20px;
+  }
+}
+.editCenter {
+  button {
+    border: 1px solid $primary-green;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: $primary-green;
+    padding-top: 11px;
+    padding-bottom: 12px;
+    width: 168px;
+  }
+}
+
+.right {
+  max-width: 700px;
+}
+// inputs
+.inputsWrapper {
+  border-left: 1px solid $text-black-20;
+  padding-left: 42px;
+  padding-top: 8px;
+  padding-bottom: -13px;
+  .inputs {
+    display: flex;
+    margin: 0px -8px;
+    margin-top: 33px;
+    flex-wrap: wrap;
+    width: calc(100% + 16px);
+  }
+}
+.input {
+  width: calc(33.33% - 16px);
+  margin: 0px 8px;
+  margin-bottom: 28px;
+}
+
+// save btn
+.btnWrapper {
+  margin-top: 9px;
+  padding-left: 42px;
+
+  .saveBtn {
+    padding-top: 15px;
+    padding-bottom: 16px;
+    background: $primary-green;
+    border-radius: 4px;
+    width: 200px;
+    color: $background-white;
+  }
+}

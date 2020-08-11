@@ -1,0 +1,20 @@
+@import '../../../sass/utils/abstract';
+
+.mainWrapper {
+  margin-top: 24px;
+  position: relative;
+}
+
+.descritpion {
+  font-weight: normal;
+  color: $text-black-50;
+  margin-top: 9px;
+}
+
+.content {
+  margin-top: 17px;
+}
+
+.spinnerContainer {
+  min-height: 300px;
+}

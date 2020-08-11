@@ -1,0 +1,17 @@
+@import '../../../sass/utils/abstract';
+
+.mainContainer {
+  height: 100%;
+
+  .title {
+    margin-bottom: 19px;
+  }
+  canvas {
+    height: 100% !important;
+  }
+  .labels {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
